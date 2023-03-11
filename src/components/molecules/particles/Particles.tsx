@@ -5,17 +5,18 @@ import { useParticles } from './useParticles';
 import { useParticlesConfig } from './useParticlesConfig';
 import { Modal } from '../../atoms/modal/Modal';
 import { Button } from '@/components/atoms/Button';
+import { InputRange } from '@/components/atoms/InputRange';
 
 export const Particles = () => {
 	const {
 		config,
 		speed,
-		changeSpeed,
 		quantity,
-		changeQuantity,
 		size,
-		changeSize,
 		opacity,
+		changeSpeed,
+		changeQuantity,
+		changeSize,
 		changeOpacity,
 		resetToDefaults,
 	} = useParticlesConfig();
@@ -25,57 +26,41 @@ export const Particles = () => {
 		<>
 			<Modal title="Edycja Cząsteczek">
 				<div className="flex flex-col gap-3">
-					<label className="block mb-2">
-						<span className="text-sm font-medium text-white">Szybkość</span>
-						<input
-							type="range"
-							value={String(speed)}
-							step="0.1"
-							min="0.1"
-							max="10"
-							className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700"
-							onChange={changeSpeed}
-						/>
-					</label>
+					<InputRange
+						label="Szybkość"
+						value={String(speed)}
+						step="0.1"
+						min="0.1"
+						max="10"
+						onChange={changeSpeed}
+					/>
 
-					<label className="block mb-2">
-						<span className="text-sm font-medium text-white">Ilość</span>
-						<input
-							type="range"
-							value={String(quantity)}
-							step="1"
-							min="0"
-							max="100"
-							className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700"
-							onChange={changeQuantity}
-						/>
-					</label>
+					<InputRange
+						label="Ilość"
+						value={String(quantity)}
+						step="1"
+						min="0"
+						max="100"
+						onChange={changeQuantity}
+					/>
 
-					<label className="block mb-2">
-						<span className="text-sm font-medium text-white">Wielkość</span>
-						<input
-							type="range"
-							value={String(size)}
-							step="1"
-							min="0"
-							max="50"
-							className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700"
-							onChange={changeSize}
-						/>
-					</label>
+					<InputRange
+						label="Wielkość"
+						value={String(size)}
+						step="1"
+						min="0"
+						max="50"
+						onChange={changeSize}
+					/>
 
-					<label className="block mb-2">
-						<span className="text-sm font-medium text-white">Przezroczystość</span>
-						<input
-							type="range"
-							value={String(opacity)}
-							step="0.1"
-							min="0"
-							max="1"
-							className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700"
-							onChange={changeOpacity}
-						/>
-					</label>
+					<InputRange
+						label="Przezroczystość"
+						value={String(opacity)}
+						step="0.1"
+						min="0"
+						max="1"
+						onChange={changeOpacity}
+					/>
 
 					<Button type="button" callback={resetToDefaults}>
 						Reset
