@@ -1,6 +1,6 @@
 import { Navigation } from '@/components/organisms/Navigation';
 import { Hero } from '@/components/organisms/hero/Hero';
-import { Particles } from '@/components/atoms/particles/Particles';
+import { Particles } from '@/components/molecules/particles/Particles';
 
 export default function HomePage() {
 	return (

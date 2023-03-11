@@ -13,7 +13,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="pl">
-			<body className="bg-theme-primary text-white">{children}</body>
+			<body className="overflow-x-hidden bg-theme-primary text-white h-[99999px]">
+				{children}
+			</body>
 		</html>
 	);
 }
