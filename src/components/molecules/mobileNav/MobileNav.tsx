@@ -18,7 +18,7 @@ export const MobileNav = () => {
 				)}
 			>
 				<button className="absolute top-8 right-8" onClick={close}>
-					<Image width="28" height="28" src="/img/cross.svg" alt="" />
+					<Image width="28" height="28" src="/img/icons/cross.svg" alt="" />
 					<span className="sr-only">Close navigation</span>
 				</button>
 
@@ -32,7 +32,7 @@ export const MobileNav = () => {
 			</div>
 
 			<button className="lg:hidden lg:pointer-events-none" onClick={open}>
-				<Image width="28" height="28" src="/img/menu.svg" alt="" />
+				<Image width="28" height="28" src="/img/icons/menu.svg" alt="" />
 				<span className="sr-only">Open navigation</span>
 			</button>
 		</>

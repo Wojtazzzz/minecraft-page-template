@@ -12,7 +12,7 @@ export const Hero = () => {
 						<span>Nie widziałeś</span>
 					</h2>
 
-					<p className="text-gray-400 font-medium max-w-lg text-xs">
+					<p className="text-gray-400 font-medium max-w-lg text-xs md:text-sm">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quis nobis
 						reiciendis error, ipsam libero a maiores reprehenderit
 					</p>
